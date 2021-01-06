@@ -10,10 +10,13 @@ library(raster)
 
 # Source functions
 source(myfunction)
-
-# Demonstrate function
 datdir <- 'data'
 dir.create(datdir, showWarnings = FALSE)
-getMap <- raster::getData("ISO3", download=TRUE, path=datdir)
-getMap
+countries <- raster::getData("ISO3", download=TRUE, path=datdir)
+countries
+
+# Demonstrate function
+level <- c(0,1,2)
+
 # Demonstrate error handling
+
